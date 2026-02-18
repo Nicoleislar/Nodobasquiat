@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+/* reset on*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+header{
+    background-color: #F7F7F5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 5%; /* El primer número controla el alto */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.logo { 
+    height: 100px; 
+    width: auto;
+    display: block;
+}
+
+
+
+
+
+
+.navbar{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+
+
+
+/* fuente base (textos) */
+body {
+    background-color: #F7F7F5;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+
+
+/* títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.rrss{
+    height: 5vh;
+    width: auto;
+}
+
+
+.hero {
+    min-height: 100vh;
+    /* capa negra con 40% de opacidad (0.4) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/assets/galeria1.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical*/
+    align-items: center; /* horizontal*/
+    overflow: hidden;
+    padding: 8rem 2rem;
+    color: #F7F7F5; 
+}
+
+
+.hero-content {
+    max-width: 90%;
+    text-align: center;
+    padding: 4rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+
+
+.exhibiciones {
+    background-color: #F7F7F5;
+    padding: 4rem 0;
+}
+
+
+.exhibiciones-header{
+    display: flex;
+    gap: 2rem;
+    align-items: last baseline;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.exhibiciones h2 {
+font-size: 2.5rem; /* recordar que los titulos tienen que tener 2.5rem */
+    line-height: 1.2;
+    margin-bottom: 4rem;
+    color: #1a1a1a;
+}
+
+.boton-coleccion{
+    display: inline-block;         /*estilo para todos los botones*/
+    margin-top: 2.5rem;
+    padding: 1rem 2.5rem;
+    border: 1px solid #1a1a1a;    
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+.exhibiciones p{
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+.grid-exhibiciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin-top: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+.espacio {
+    padding: 5rem 5%; 
+    background-color: #F7F7F5;
+}
+
+.espacio-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.espacio-foto {
+    flex: 1; /* 50% del ancho del contenedor espacio */
+}
+
+.espacio-foto img {
+    width: 100%;       /* la foto ocupa todo su flex: 1 */
+    display: block;    /* sin espacios abajo de la imagen */
+    object-fit: cover; /* esto no lo sabia, hace que la imagen se adapte al tamaño q le doy sin que se vea raro */
+}
+
+
+.espacio-texto {
+    flex: 1; /* el otro 50% */
+}
+
+
+.pre-titulo {
+    text-transform: uppercase; /* todo en mayus*/
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+.espacio-texto h2 {
+    font-size: 2.5rem; /* recordar que los textos tienen que tener 2.5rem */
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+
+.espacio-texto p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+.boton-agenda{
+    display: inline-block;
+    margin-top: 2.5rem;
+    padding: 1rem 2.5rem;
+    border: 1px solid #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 4rem;
+    text-decoration: none;
+}
+
+
+
+footer {
+    background-color: #F7F7F5;
+    padding: 4rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
