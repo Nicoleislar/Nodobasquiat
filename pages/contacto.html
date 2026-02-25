@@ -4,34 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nodobasquiat - Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
     <header>
-        <a href="../index.html">
-            <img src="../assets/assets/logonodo.png" alt="Logo de Nodobasquiat" class="logo">
-        </a>
+            <nav class="navbar navbar-expand-lg w-100">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../assets/logonodo.png" alt="NODO Basquiat - Galería de Arte" class="logo">
+                    </a>
 
-        <nav>
-            <ul class="navbar">
-                <li>
-                    <a href="../index.html">Home</a>
-                </li>
-                <li>
-                    <a href="./coleccion.html">Colección</a>
-                </li>
-                <li>
-                    <a href="./artistas.html">Artistas</a>
-                </li>
-                <li>
-                    <a href="./espacio.html">Espacio</a>
-                </li>
-                <li>
-                    <a href="./contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/coleccion.html">Colección</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/espacio.html">Espacio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
     </header>
 
     <main>
@@ -68,37 +75,51 @@
     </main>
 
 
-    <footer>
-        <h2>Derechos reservados</h2>
-        <h2>Creado por Isla Roque</h2>
+        <footer class="footer">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="../assets/logo footer1.png" alt="NODO Basquiat - Galería de Arte" class="footer-logo">
+                    <p>El punto de encuentro donde el arte contemporáneo y la cultura urbana coinciden.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <a href="../index.html">Home</a>
+                    <a href="../pages/coleccion.html">Colección</a>
+                    <a href="../pages/espacio.html">Espacio</a>
+                    <a href="../pages/contacto.html">Contacto</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Comunidad</h4>
+                    <div class="footer-socials">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="https://www.instagram.com/"><img src="../assets/logosrs/instagram.png" alt="IG"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/"><img src="../assets/logosrs/facebook.png" alt="FB"></a>
+                                </li>
+                                <li>
+                                    <a href="https://open.spotify.com/intl-es"><img src="../assets/logosrs/spotify.png" alt="SP"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/"><img src="../assets/logosrs/yt.png" alt="YT"></a>
+                                </li>
+                                <li>
+                                    <a href="https://web.whatsapp.com/"><img src="../assets/logosrs/whatsapp.png" alt="WA"></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <p>© 2026 NODO BASQUIAT — CREADO POR ISLA ROQUE</p>
+            </div>
+        </footer>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="https://www.instagram.com/" target="_blank">
-                    <img src="../assets/assets/logosrs/instagram.png" alt="Logo de Instagram" class="rrss">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/" target="_blank">
-                    <img src="../assets/assets/logosrs/facebook.png" alt="Logo de facebook" class="rrss">
-                </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/" target="_blank">
-                    <img src="../assets/assets/logosrs/yt.png" alt="Logo de Youtube" class="rrss">
-                </a>
-                </li>
-                <li>
-                    <a href="https://open.spotify.com/" target="_blank">
-                    <img src="../assets/assets/logosrs/spotify.png" alt="Logo de Spotify" class="rrss">
-                </a>
-                </li>
-                
-            </ul>
-            
-        </nav>
-
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 </html>

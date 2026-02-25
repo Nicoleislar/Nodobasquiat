@@ -1,37 +1,46 @@
 <!DOCTYPE html>
-<html lang="es-en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nodobasquiat - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
+
 <body>
     <header>
-        <a href="./index.html">
-            <img src="assets/assets/logonodo.png" alt="Logo de Nodobasquiat" class="logo">
-        </a>
+            <nav class="navbar navbar-expand-lg w-100">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">
+                        <img src="./assets/logonodo.png" alt="NODO Basquiat - Galería de Arte" class="logo">
+                    </a>
 
-        <nav>
-            <ul class="navbar">
-                <li>
-                    <a href="./index.html">Home</a>
-                </li>
-                <li>
-                    <a href="./pages/coleccion.html">Colección</a>
-                </li>
-                <li>
-                    <a href="./pages/artistas.html">Artistas</a>
-                </li>
-                <li>
-                    <a href="./pages/espacio.html">Espacio</a>
-                </li>
-                <li>
-                    <a href="./pages/contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/coleccion.html">Colección</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/espacio.html">Espacio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
     </header>
 
 
@@ -41,106 +50,148 @@
                 <h1>El arte como punto de encuentro</h1>
                 <p>
                     Nodo Basquiat es un espacio dedicado al arte contemporáneo,
-                    la moda y el intercambio cultural. Una plataforma donde
-                    artistas, obras y personas convergen en un entorno íntimo,
-                    cuidadosamente curado y en constante diálogo.
+                    la moda y el intercambio cultural.
                 </p>
+                <div class="hero-btn">
+                    <a href="./pages/coleccion.html" class="btn-hero1">Exhibición actual</a>
+                    <a href="./pages/contacto.html" class="btn-hero2">Planea tu visita</a>
+                </div>
             </div>
         </section>
 
         <section class="exhibiciones">
             <div class="container">
                 <div class="exhibiciones-header">
-                    <h2>Exhibiciones actuales</h2>
+                    <h2>Las mejores experiencias</h2>
                     <nav class="boton-coleccion">
-                        <ul>
-                            <li>
-                                <a href="./pages/coleccion.html">Ver toda la agenda</a>
-                            </li>
-                        </ul>
+                        <a href="./pages/coleccion.html">Ver toda la agenda</a>
                     </nav>
                 </div>
-                
-                
-            <div class="grid-exhibiciones">
 
-                <article class="card">
-                    <img src="./assets/assets/inspo_arsham_Darkham.png" alt="Exposición Darkham en movimiento">
-                    <h3>Darkham en movimiento</h3>
-                    <p>Del 2 de febrero al 24 de mayo de 2026.</p>
-                </article>
+                <div class="grid-exhibiciones">
 
-                <article class="card">
-                    <img src="./assets/assets/galeria2.png" alt="Exposición Y.Kusamae para siempre">
-                    <h3>Y. Kusamae para siempre</h3>
-                    <p>Del 17 de noviembre de 2025 al 1 de marzo de 2026.</p>
-                </article>
+                    <article class="card">
+                        <img src="./assets/inspo_arsham_Darkham.png" alt="Exposición Darkham en movimiento">
+                        <h3>Darkham en movimiento</h3>
+                        <p>Del 2 de febrero al 24 de mayo de 2026.</p>
+                    </article>
 
-                <article class="card"> 
-                    <img src="./assets/assets/inspo_HaringBasquiat_J Harington.png" alt="Exposición Harington keith">
-                    <h3>Harington keith: Pop moderno</h3>
-                    <p>Del 2 de diciembre de 2025 al 11 de mayo de 2026.</p>
-                </article>
-                    
+                    <article class="card">
+                        <img src="./assets/galeria2.png" alt="Exposición Y.Kusamae para siempre">
+                        <h3>Y. Kusamae para siempre</h3>
+                        <p>Del 17 de noviembre de 2025 al 1 de marzo de 2026.</p>
+                    </article>
+
+                    <article class="card">
+                        <img src="./assets/inspo_HaringBasquiat_J Harington.png"
+                            alt="Exposición Harington keith">
+                        <h3>Harington keith: Pop moderno</h3>
+                        <p>Del 2 de diciembre de 2025 al 11 de mayo de 2026.</p>
+                    </article>
+
+                </div> 
+            </div> 
+        </section>
+
+
+        <section class="espacio">
+            <div class="espacio-container">
+                <div class="espacio-foto">
+                    <img src="./assets/galeria3.png" alt="Galeria de arte Nodobasquiat">
+                </div>
+                <div class="espacio-texto">
+                    <span class="pre-titulo">Nuestro Espacio</span>
+                    <h2>No es solo qué ves, es el cómo y con quién lo compartís.</h2>
+                    <p>La obra es el inicio; el entorno es el lenguaje. En Nodo, creemos que la profundidad de una pieza
+                        se mide por la conversación que genera. Un espacio diseñado para que el arte suceda entre
+                        personas que ven el mundo con tu misma intensidad.</p>
+                    <a href="./pages/contacto.html" class="boton-agenda">Agenda tu visita</a>
+                </div>
             </div>
         </section>
 
 
-<section class="espacio">
-    <div class="espacio-container">
-        <div class="espacio-foto">
-            <img src="./assets/assets/galeria3.png" alt="Galeria de arte Nodobasquiat">
+        <section class="about">
+                <div class="about-container">
+                    <span class="pre-titulo">Acerca de nuestra visión</span>
+                    <h2 class="about-t">Un refugio para la cultura emergente.</h2>
+                    <p class="about-p">En Nodo Basquiat, el arte es el catalizador de algo más grande. Entendemos cada exhibición como una experiencia compartida: el eco de un vinilo de fondo, una copa de vino que abre el diálogo y la coincidencia de quienes buscan lo nuevo fuera de los circuitos tradicionales.
+                        
+                        No somos solo una parada en el mapa cultural; somos el radar de la escena emergente, fusionando la pausa de una galería con la energía vibrante de un punto de encuentro social.</p>
+                </div>
+        </section>
+
+<section class="estad">
+    <div class="estad-container">
+        <div class="estad-icono">
+            <span class="estad-num">+40</span>
+            <p class="estad-desc">Artistas representados</p>
         </div>
-        <div class="espacio-texto">
-            <p class="pre-titulo">Nuestro Espacio</p> 
-            <h2>No es solo qué ves, es el cómo y con quién lo compartís.</h2>
-            <p>La obra es el inicio; el entorno es el lenguaje. En Nodo, creemos que la profundidad de una pieza se mide por la conversación que genera. Un espacio diseñado para que el arte suceda entre personas que ven el mundo con tu misma intensidad.</p>
-            <nav class="boton-agenda">
-                <ul>
-                    <li>
-                        <a href="./pages/contacto.html">Agenda tu visita</a>
-                    </li>
-                </ul>
-            </nav>
+        <div class="estad-icono">
+            <span class="estad-num">18</span>
+            <p class="estad-desc">Exposiciones realizadas</p>
         </div>
-    </div>
+        <div class="estad-icono">
+            <span class="estad-num">3</span>
+            <p class="estad-desc">Años en el espacio</p>
+        </div>
+        <div class="estad-icono">
+            <span class="estad-num">8k</span>
+            <p class="estad-desc">Visitantes al año</p>
+        </div>
+    </div> 
 </section>
 
 
     </main>
 
 
-    <footer>
-        <h2 class="der">Derechos reservados</h2>
-        <h2 class="own">Creado por Isla Roque</h2>
+        <footer class="footer">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="./assets/logo footer1.png" alt="NODO Basquiat - Galería de Arte" class="footer-logo">
+                    <p>El punto de encuentro donde el arte contemporáneo y la cultura urbana coinciden.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explorar</h4>
+                    <a href="./index.html">Home</a>
+                    <a href="./pages/coleccion.html">Colección</a>
+                    <a href="./pages/espacio.html">Espacio</a>
+                    <a href="./pages/contacto.html">Contacto</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Comunidad</h4>
+                    <div class="footer-socials">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="https://www.instagram.com/"><img src="./assets/logosrs/instagram.png" alt="IG"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/"><img src="./assets/logosrs/facebook.png" alt="FB"></a>
+                                </li>
+                                <li>
+                                    <a href="https://open.spotify.com/intl-es"><img src="./assets/logosrs/spotify.png" alt="SP"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/"><img src="./assets/logosrs/yt.png" alt="YT"></a>
+                                </li>
+                                <li>
+                                    <a href="https://web.whatsapp.com/"><img src="./assets/logosrs/whatsapp.png" alt="WA"></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <p>© 2026 NODO BASQUIAT — CREADO POR ISLA ROQUE</p>
+            </div>
+        </footer>
 
-        <nav>
-            <ul>
-                <li>
-                    <a href="https://www.instagram.com/" target="_blank">
-                    <img src="./assets/assets/logosrs/instagram.png" alt="Logo de Instagram" class="rrss">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/" target="_blank">
-                    <img src="./assets/assets/logosrs/facebook.png" alt="Logo de facebook" class="rrss">
-                </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/" target="_blank">
-                    <img src="./assets/assets/logosrs/yt.png" alt="Logo de Youtube" class="rrss">
-                </a>
-                </li>
-                <li>
-                    <a href="https://open.spotify.com/" target="_blank">
-                    <img src="./assets/assets/logosrs/spotify.png" alt="Logo de Spotify" class="rrss">
-                </a>
-                </li>
-                
-            </ul>
-            
-        </nav>
-
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
