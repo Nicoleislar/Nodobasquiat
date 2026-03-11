@@ -557,6 +557,129 @@ header .nav-link:hover {
   }
 }
 
+.artistas-hero {
+  padding: 3rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.artistas-hero .pre-titulo {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+.artistas-hero .artistas-h2 {
+  font-size: 2.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.artistas-lista {
+  padding: 5rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+.artistas-lista .artista-perfil {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+.artistas-lista .artista-perfil .artista-img img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}
+.artistas-lista .artista-perfil .artista-info .artista-tag {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+.artistas-lista .artista-perfil .artista-info h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+.artistas-lista .artista-perfil .artista-info .artista-bio {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 2.5rem;
+}
+.artistas-lista .artista-perfil .artista-info .artista-obra {
+  border-top: 1px solid #ddd;
+  padding-top: 2rem;
+}
+.artistas-lista .artista-perfil .artista-info .artista-obra .pre-titulo {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.8rem;
+}
+.artistas-lista .artista-perfil .artista-info .artista-obra p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+.artistas-lista .artista-invertido .artista-img {
+  order: 2;
+}
+.artistas-lista .artista-invertido .artista-info {
+  order: 1;
+}
+@media (min-width: 481px) and (max-width: 960px) {
+  .artistas-lista {
+    gap: 5rem;
+  }
+  .artistas-lista .artista-perfil {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .artistas-lista .artista-perfil .artista-img img {
+    height: 400px;
+  }
+  .artistas-lista .artista-invertido .artista-img {
+    order: 0;
+  }
+  .artistas-lista .artista-invertido .artista-info {
+    order: 0;
+  }
+}
+@media (min-width: 300px) and (max-width: 480px) {
+  .artistas-lista {
+    gap: 4rem;
+  }
+  .artistas-lista .artista-perfil {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .artistas-lista .artista-perfil .artista-img img {
+    height: 300px;
+  }
+  .artistas-lista .artista-perfil h2 {
+    font-size: 1.8rem;
+  }
+  .artistas-lista .artista-invertido .artista-img {
+    order: 0;
+  }
+  .artistas-lista .artista-invertido .artista-info {
+    order: 0;
+  }
+}
+
 .espacio-hero {
   display: flex;
   flex-direction: column;

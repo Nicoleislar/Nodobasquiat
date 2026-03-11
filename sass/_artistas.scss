@@ -1,0 +1,126 @@
+@use "variables" as v;
+
+.artistas-hero {
+    padding: 3rem 5%;
+    max-width: v.$ancho-container;
+    margin: 0 auto;
+    .pre-titulo {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        color: v.$color-gris-suave;
+        margin-bottom: 1rem;
+    }
+    .artistas-h2 {
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: v.$color-principal;
+    }
+}
+
+.artistas-lista {
+    padding: v.$padding-seccion;
+    max-width: v.$ancho-container;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    .artista-perfil {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+        align-items: center;
+        .artista-img {
+            img {
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+                display: block;
+            }
+        }
+        .artista-info {
+            .artista-tag {
+                display: block;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 0.75rem;
+                color: v.$color-gris-suave;
+                margin-bottom: 1.5rem;
+            }
+            h2 {
+                font-size: 2.5rem;
+                font-weight: 400;
+                margin-bottom: 1.5rem;
+                color: v.$color-principal;
+            }
+            .artista-bio {
+                font-size: 1.1rem;
+                line-height: 1.8;
+                color: v.$color-texto;
+                margin-bottom: 2.5rem;
+            }
+            .artista-obra {
+                border-top: 1px solid #ddd;
+                padding-top: 2rem;
+                .pre-titulo {
+                    display: block;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 0.9rem;
+                    color: v.$color-gris-suave;
+                    margin-bottom: 0.8rem;
+                }
+                p {
+                    font-size: 1rem;
+                    line-height: 1.6;
+                    color: v.$color-texto;
+                }
+            }
+        }
+    }
+
+    .artista-invertido {
+        .artista-img {
+            order: 2;
+        }
+        .artista-info {
+            order: 1;
+        }
+    }
+
+    @include v.tablet {
+        gap: 5rem;
+
+        .artista-perfil {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+
+            .artista-img img { height: 400px; }
+        }
+
+        .artista-invertido {
+            .artista-img { order: 0; }
+            .artista-info { order: 0; }
+        }
+    }
+
+    @include v.mobile {
+        gap: 4rem;
+
+        .artista-perfil {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+
+            .artista-img img { height: 300px; }
+
+            h2 { font-size: 1.8rem; }
+        }
+
+        .artista-invertido {
+            .artista-img { order: 0; }
+            .artista-info { order: 0; }
+        }
+    }
+}
