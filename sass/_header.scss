@@ -1,0 +1,36 @@
+@use "variables" as v;
+
+header {
+    background-color: v.$color-fondo;
+    @include v.flex-box(row, nowrap, space-between, center);
+    padding: 0.5rem 2%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    .logo {
+        height: 50px;
+        width: auto;
+        display: block;
+    }
+    .nav-link {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.85rem;
+        color: v.$color-principal !important;
+        transition: v.$transicion-suave;
+        &:hover{
+            color: v.$color-gris-suave !important;
+        }
+    }
+
+    @include v.tablet {
+        padding: 10px 5%;
+        .logo { height: 40px; }
+    }
+
+    @include v.mobile {
+        padding: 8px 4%;
+        .logo { height: 40px; }
+    }
+}
+

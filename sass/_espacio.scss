@@ -1,0 +1,88 @@
+@use "variables" as v;
+
+.espacio-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 5%;
+    max-width: v.$ancho-container;
+    margin: 0 auto;
+    .pre-titulo {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        color: v.$color-gris-suave;
+        margin-bottom: 1rem;
+    }
+    .espacio-h2 {
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: v.$color-principal;
+    }
+}
+
+.espacio-galeria {
+    padding: v.$padding-seccion;
+    .espacio-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        max-width: v.$ancho-container;
+        margin: 0 auto;
+        .espacio-card1,
+        .espacio-card2,
+        .espacio-card3,
+        .espacio-card4 {
+            .espacio-img {
+                img {
+                    width: 100%;
+                    height: 450px;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+            .espacio-info {
+                .espacio-fecha {
+                    display: block;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 0.75rem;
+                    color: v.$color-gris-suave;
+                    margin-top: 1rem;
+                    margin-bottom: 0.5rem;
+                }
+                h2 {
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    margin-bottom: 0.5rem;
+                    color: v.$color-principal;
+                }
+                p {
+                    font-size: 1rem;
+                    line-height: 1.6;
+                    color: v.$color-texto;
+                }
+            }
+        }
+    }
+
+
+
+    @include v.tablet {
+        .espacio-grid {
+            gap: 30px;
+            .espacio-img img { height: 350px; }
+        }
+    }
+
+    @include v.mobile {
+        .espacio-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            .espacio-img img { height: 280px; }
+        }
+    }
+}

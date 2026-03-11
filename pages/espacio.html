@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,94 +10,128 @@
 </head>
 <body>
     <header>
-            <nav class="navbar navbar-expand-lg w-100">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="../index.html">
-                        <img src="../assets/logonodo.png" alt="NODO Basquiat - Galería de Arte" class="logo">
-                    </a>
-
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../pages/coleccion.html">Colección</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../pages/espacio.html">Espacio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../pages/contacto.html">Contacto</a>
-                            </li>
-                        </ul>
-                    </div>
+        <nav class="navbar navbar-expand-lg w-100">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/logonodo.png" alt="NODO Basquiat" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/coleccion.html">Colección</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/espacio.html">Espacio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <section>
-            <article>
-                    <h2>Espacio</h2>
-                        <p>
-                        Un punto de encuentro donde el arte se vive de forma cercana y colectiva.
-                        </p>
-                        <img src="../assets/inspo_arsham_Darkham.png" alt="Escultura de Darkham">
-            </article>
+
+        <section class="espacio-hero">
+            <p class="pre-titulo">Nuestro espacio</p>
+            <h2 class="espacio-h2">Donde el arte cobra vida.</h2>
+        </section>
+
+        <section class="espacio-galeria">
+            <div class="espacio-grid">
+
+                <article class="espacio-card1">
+                    <div class="espacio-img">
+                        <img src="../assets/galeria1.png" alt="Nodo Basquiat espacio principal">
+                    </div>
+                    <div class="espacio-info">
+                        <span class="espacio-fecha">Espacio principal</span>
+                        <h2>La galería</h2>
+                        <p>Un espacio de 400m² diseñado para que el arte respire. Paredes blancas, luz natural y una arquitectura que desaparece para que la obra tome el protagonismo.</p>
+                    </div>
+                </article>
+
+                <article class="espacio-card2">
+                    <div class="espacio-img">
+                        <img src="../assets/espacio7.png" alt="Evento en Nodo Basquiat">
+                    </div>
+                    <div class="espacio-info">
+                        <span class="espacio-fecha">Eventos — 2026</span>
+                        <h2>Vernissages y aperturas</h2>
+                        <p>Cada exposición comienza con una apertura donde el arte y la conversación se encuentran. Vino, música y personas que ven el mundo con la misma intensidad.</p>
+                    </div>
+                </article>
+
+                <article class="espacio-card3">
+                    <div class="espacio-img">
+                        <img src="../assets/espacio6.png" alt="Sala de eventos Nodo Basquiat">
+                    </div>
+                    <div class="espacio-info">
+                        <span class="espacio-fecha">Sala de eventos</span>
+                        <h2>Encuentros culturales</h2>
+                        <p>Charlas, performances, proyecciones y residencias artísticas. Un programa pensado para quienes buscan algo más que una visita.</p>
+                    </div>
+                </article>
+
+                <article class="espacio-card4">
+                    <div class="espacio-img">
+                        <img src="../assets/galeria4.png" alt="Terraza Nodo Basquiat">
+                    </div>
+                    <div class="espacio-info">
+                        <span class="espacio-fecha">Terraza</span>
+                        <h2>El espacio entre obras</h2>
+                        <p>Un lugar para pausar, reflexionar y continuar la conversación que empezó adentro.</p>
+                    </div>
+                </article>
+
+            </div>
         </section>
 
     </main>
 
-        <footer class="footer">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="../assets/logo footer1.png" alt="NODO Basquiat - Galería de Arte" class="footer-logo">
-                    <p>El punto de encuentro donde el arte contemporáneo y la cultura urbana coinciden.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Explorar</h4>
-                    <a href="../index.html">Home</a>
-                    <a href="../pages/coleccion.html">Colección</a>
-                    <a href="../pages/espacio.html">Espacio</a>
-                    <a href="../pages/contacto.html">Contacto</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Comunidad</h4>
-                    <div class="footer-socials">
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="https://www.instagram.com/"><img src="../assets/logosrs/instagram.png" alt="IG"></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/"><img src="../assets/logosrs/facebook.png" alt="FB"></a>
-                                </li>
-                                <li>
-                                    <a href="https://open.spotify.com/intl-es"><img src="../assets/logosrs/spotify.png" alt="SP"></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com/"><img src="../assets/logosrs/yt.png" alt="YT"></a>
-                                </li>
-                                <li>
-                                    <a href="https://web.whatsapp.com/"><img src="../assets/logosrs/whatsapp.png" alt="WA"></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../assets/logo footer1.png" alt="NODO Basquiat" class="footer-logo">
+                <p>El punto de encuentro donde el arte contemporáneo y la cultura urbana coinciden.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Explorar</h4>
+                <a href="../index.html">Home</a>
+                <a href="../pages/coleccion.html">Colección</a>
+                <a href="../pages/espacio.html">Espacio</a>
+                <a href="../pages/contacto.html">Contacto</a>
+            </div>
+            <div class="footer-col">
+                <h4>Comunidad</h4>
+                <div class="footer-socials">
+                    <nav>
+                        <ul>
+                            <li><a href="https://www.instagram.com/"><img src="../assets/logosrs/instagram.png" alt="IG"></a></li>
+                            <li><a href="https://www.facebook.com/"><img src="../assets/logosrs/facebook.png" alt="FB"></a></li>
+                            <li><a href="https://open.spotify.com/intl-es"><img src="../assets/logosrs/spotify.png" alt="SP"></a></li>
+                            <li><a href="https://www.youtube.com/"><img src="../assets/logosrs/yt.png" alt="YT"></a></li>
+                            <li><a href="https://web.whatsapp.com/"><img src="../assets/logosrs/whatsapp.png" alt="WA"></a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <div class="footer-legal">
-                <p>© 2026 NODO BASQUIAT — CREADO POR ISLA ROQUE</p>
-            </div>
-        </footer>
+        </div>
+        <div class="footer-legal">
+            <p>© 2026 NODO BASQUIAT — CREADO POR ISLA ROQUE</p>
+        </div>
+    </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 </body>

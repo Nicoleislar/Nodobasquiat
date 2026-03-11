@@ -1,0 +1,98 @@
+@use "variables" as v;
+
+.coleccion-hero {
+    background-color: v.$color-fondo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 5%;
+    max-width: v.$ancho-container;
+    margin: 0 auto;
+    .pre-titulo {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        color: v.$color-gris-suave;
+        margin-bottom: 1rem;
+    }
+    .collecion-h2 {
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: v.$color-principal;
+    }
+}
+
+.coleccion {
+    padding: v.$padding-seccion;
+    background-color: v.$color-fondo;
+    .coleccion-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        max-width: v.$ancho-container;
+        margin: 0 auto;
+        .coleccion-card1,
+        .coleccion-card5 {
+            grid-column: 1 / 3;
+        }
+        .coleccion-card1,
+        .coleccion-card2,
+        .coleccion-card3,
+        .coleccion-card4,
+        .coleccion-card5 {
+            .coleccion-img {
+                img {
+                    width: 100%;
+                    height: 450px;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+            .coleccion-info {
+                .coleccion-fecha {
+                    display: block;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 0.75rem;
+                    color: v.$color-gris-suave;
+                    margin-top: 1rem;
+                    margin-bottom: 0.5rem;
+                }
+                h2 {
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    margin-bottom: 0.5rem;
+                    color: v.$color-principal;
+                }
+                p {
+                    font-size: 1rem;
+                    line-height: 1.6;
+                    color: v.$color-texto;
+                }
+            }
+        }
+    }
+
+    @include v.tablet {
+        .coleccion-grid {
+            gap: 30px;
+
+            .coleccion-img img { height: 350px; }
+        }
+    }
+
+    @include v.mobile {
+        .coleccion-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            .coleccion-card1,
+            .coleccion-card5 {
+                grid-column: 1 / 2;
+            }
+            .coleccion-img img { height: 280px; }
+        }
+    }
+}

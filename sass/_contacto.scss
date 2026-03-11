@@ -1,0 +1,177 @@
+@use "variables" as v;
+
+.contacto-hero {
+    padding: 3rem 5%;
+    max-width: v.$ancho-container;
+    margin: 0 auto;
+    .pre-titulo {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        color: v.$color-gris-suave;
+        margin-bottom: 1rem;
+    }
+    .contacto-h2 {
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: v.$color-principal;
+    }
+}
+
+.contacto-body {
+    padding: v.$padding-seccion;
+    .contacto-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 6rem;
+        max-width: v.$ancho-container;
+        margin: 0 auto;
+        .contacto-form {
+            .pre-titulo {
+                display: block;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 0.9rem;
+                color: v.$color-gris-suave;
+                margin-bottom: 2rem;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    label {
+                        font-size: 0.8rem;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        color: v.$color-gris-suave;
+                    }
+                    input,
+                    select,
+                    textarea {
+                        background: transparent;
+                        border: none;
+                        border-bottom: 1px solid #ccc;
+                        padding: 0.8rem 0;
+                        font-family: v.$font-cuerpo;
+                        font-size: 1rem;
+                        color: v.$color-principal;
+                        outline: none;
+                        transition: v.$transicion-suave;
+                        &::placeholder {
+                            color: #bbb;
+                        }
+                        &:focus {
+                            border-bottom-color: v.$color-principal;
+                        }
+                    }
+                    textarea {
+                        resize: none;
+                    }
+                }
+                .contacto-btn {
+                    align-self: flex-start;
+                    margin-top: 1rem;
+                    padding: 1rem 2.5rem;
+                    background-color: v.$color-principal;
+                    color: v.$color-fondo;
+                    border: none;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 0.85rem;
+                    font-family: v.$font-cuerpo;
+                    cursor: pointer;
+                    transition: v.$transicion-suave;
+                    &:hover {
+                        background-color: v.$color-hover;
+                    }
+                }
+            }
+        }
+        .contacto-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            padding-top: 3rem;
+            .info-bloque {
+                .pre-titulo {
+                    display: block;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-size: 0.9rem;
+                    color: v.$color-gris-suave;
+                    margin-bottom: 0.8rem;
+                }
+                p {
+                    font-size: 1rem;
+                    line-height: 1.7;
+                    color: v.$color-texto;
+                }
+            }
+            .contacto-socials {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                a {
+                    font-size: 1rem;
+                    color: v.$color-texto;
+                    transition: v.$transicion-suave;
+                    &:hover {
+                        color: v.$color-principal;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contacto-mapa {
+    width: 100%;
+    height: 450px;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+        filter: grayscale(100%);
+    }
+}
+
+// TABLET
+@include v.tablet {
+    .contacto-grid {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+
+    .contacto-mapa {
+        height: 350px;
+    }
+}
+
+// MOBILE
+@include v.mobile {
+    .contacto-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .contacto-h2 {
+        font-size: 2rem !important;
+    }
+
+    .contacto-mapa {
+        height: 280px;
+    }
+
+    .contacto-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

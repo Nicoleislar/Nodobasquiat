@@ -1,0 +1,56 @@
+
+
+$color-principal: #1a1a1a;    // botones, títulos, estadísticas
+$color-fondo:      #F7F7F5;    // fondo
+$color-texto:      #444;       // gris oscuro (párrafos/cuerpo)
+$color-gris-suave: #888;       // gris medio (pre-títulos y textos secundarios)
+$color-blanco:     #ffffff;    // cards
+$color-hover:      #333;       // gris muy oscuro (estados hover)
+
+
+$font-titulos: 'Inter', sans-serif;
+$font-cuerpo:  'Source Sans 3', sans-serif;
+
+
+$ancho-container: 1200px;     
+$padding-seccion: 5rem 5%;     
+$gap-grid:        2rem;        
+
+
+$transicion-suave: all 0.3s ease;
+$sombra-card:      0 4px 6px rgba(0,0,0,0.1); // Por si quieres estandarizar sombras
+
+
+
+
+
+@mixin tablet {
+    @media (min-width: 481px) and (max-width: 960px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: 300px) and (max-width: 480px) {
+        @content;
+    }
+}
+
+
+@mixin flex-box($dir, $wr, $jc, $al) {
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: $wr;
+    justify-content: $jc;
+    align-items: $al;
+}
+
+// EXTEND
+%flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

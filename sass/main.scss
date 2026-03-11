@@ -1,0 +1,33 @@
+//sass --watch sass/main.scss styles/styles.css
+@use "variables" as v;
+
+
+
+
+@use "variables";
+@use "header";
+@use "footer";
+@use "home";
+@use "coleccion";
+@use "espacio";
+@use "contacto";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: v.$color-fondo;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
