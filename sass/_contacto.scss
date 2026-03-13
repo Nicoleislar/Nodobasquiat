@@ -75,22 +75,25 @@
                     }
                 }
                 .contacto-btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
                     align-self: flex-start;
                     margin-top: 1rem;
-                    padding: 1rem 2.5rem;
+                    padding: 12px 30px;
+                    height: 50px;
                     background-color: v.$color-principal;
                     color: v.$color-fondo;
-                    border: none;
+                    border: 1px solid v.$color-principal;
                     text-transform: uppercase;
                     letter-spacing: 2px;
-                    font-size: 0.85rem;
+                    font-size: 0.8rem;
                     font-family: v.$font-cuerpo;
-                    cursor: pointer;
                     transition: v.$transicion-suave;
-                    &:hover {
-                        background-color: v.$color-hover;
+                        &:hover {
+                            background-color: v.$color-hover !important;
+                            }
                     }
-                }
             }
         }
         .contacto-info {
@@ -143,7 +146,7 @@
     }
 }
 
-// TABLET
+
 @include v.tablet {
     .contacto-grid {
         grid-template-columns: 1fr !important;
@@ -155,7 +158,7 @@
     }
 }
 
-// MOBILE
+
 @include v.mobile {
     .contacto-grid {
         grid-template-columns: 1fr !important;
