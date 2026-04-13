@@ -169,7 +169,7 @@ header .nav-link:hover {
   padding: 4rem;
 }
 .hero .hero-content h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 .hero .hero-content p {
@@ -193,7 +193,7 @@ header .nav-link:hover {
   height: 50px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   transition: all 0.3s ease;
 }
 .hero .hero-content .hero-btn .btn-hero1 {
@@ -462,30 +462,27 @@ header .nav-link:hover {
   color: #888;
 }
 @media (max-width: 960px) {
-  .estad .estad-container .estad-icono {
-    padding: 2rem 1.5rem;
-  }
-  .estad .estad-container .estad-icono .estad-num {
-    font-size: 3.5rem;
+  .estad .estad-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 580px) {
   .estad {
-    padding: 2rem 0;
+    padding: 3rem 1.5rem;
   }
   .estad .estad-container {
     grid-template-columns: 1fr !important;
-    border-left: none;
-    border-right: none;
+    border-left: 1px solid #444;
   }
-  .estad .estad-icono {
-    padding: 2rem;
-    text-align: center;
-    border-left: none;
-    border-right: none;
+  .estad .estad-container .estad-icono {
+    border-right: 1px solid #444;
+    border-bottom: 1px solid #444;
   }
-  .estad .estad-icono .estad-num {
-    font-size: 3rem;
+  .estad .estad-container .estad-icono .estad-num {
+    font-size: 4rem;
+  }
+  .estad .estad-container .estad-icono .estad-desc {
+    font-size: 0.85rem;
   }
 }
 
