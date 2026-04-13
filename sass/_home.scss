@@ -69,64 +69,56 @@
 
 .exhibiciones {
     background-color: v.$color-fondo;
-    padding: 4rem 0;
+    padding: 4rem 1rem;
+
     .container {
         max-width: v.$ancho-container;
         margin: 0 auto;
+
         .exhibiciones-header {
-            @include v.flex-box(row, nowrap, space-between, last baseline);
-            gap: 2rem;
+            @include v.flex-box(row, wrap, space-between, center);
+            gap: 1rem;
+            margin-bottom: 2rem;
+
             h2 {
-                font-size: 2.5rem;
-                line-height: 1.2;
-                margin-bottom: 4rem;
-                color: v.$color-principal;
-            }
-            .boton-coleccion {
-                display: inline-block;
-                margin-top: 2.5rem;
-                padding: 1rem 2.5rem;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                font-size: 0.9rem;
-                color: v.$color-gris-suave;
-                margin-bottom: 1rem;
-                &:hover { text-decoration: underline; }
+            font-size: 2.5rem;
+            color: v.$color-principal;
             }
         }
+
         .grid-exhibiciones {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: v.$gap-grid;
+
             .card {
-                background: v.$color-blanco;
-                padding: 1rem;
-                transition: v.$transicion-suave;
+                    background: v.$color-blanco;
+                    padding: 1rem;
                 img {
                     width: 100%;
-                    height: 300px;
+                    height: 350px;
                     object-fit: cover;
                 }
-                h3 { margin-top: 1rem; }
-                p {
-                    font-size: 1.1rem;
-                    line-height: 1.7;
-                    color: v.$color-texto;
-                }
-                &:hover { transform: translateY(-5px); }
-            }
+        }
         }
     }
 
     @include v.tablet {
-        .grid-exhibiciones { grid-template-columns: 1fr; }
+        .grid-exhibiciones {
+            grid-template-columns: repeat(2, 1fr); 
+        }
     }
 
     @include v.mobile {
-    .grid-exhibiciones {
-        grid-template-columns: 1fr !important;
-        gap: 1.5rem;
-    }
+        .exhibiciones-header {
+            flex-direction: column;
+            align-items: flex-start;
+            h2 { font-size: 1.8rem; }
+        }
+        .grid-exhibiciones {
+            grid-template-columns: 1fr !important;
+            .card img { height: 300px; }
+        }
     }
 }
 
@@ -134,21 +126,26 @@
 .espacio {
     padding: v.$padding-seccion;
     background-color: v.$color-fondo;
+
     .espacio-container {
         @include v.flex-box(row, nowrap, flex-start, center);
         gap: 4rem;
         max-width: v.$ancho-container;
         margin: 0 auto;
+
         .espacio-foto {
             flex: 1;
+
             img {
                 width: 100%;
                 display: block;
                 object-fit: cover;
             }
         }
+
         .espacio-texto {
             flex: 1;
+
             .pre-titulo {
                 display: block;
                 text-transform: uppercase;
@@ -157,17 +154,20 @@
                 color: v.$color-gris-suave;
                 margin-bottom: 1rem;
             }
+
             h2 {
                 font-size: 2.5rem;
                 line-height: 1.2;
                 margin-bottom: 1.5rem;
                 color: v.$color-principal;
             }
+
             p {
                 font-size: 1.1rem;
                 line-height: 1.7;
                 color: v.$color-texto;
             }
+
             .boton-agenda {
                 display: inline-flex;
                 align-items: center;
@@ -180,23 +180,29 @@
                 font-size: 0.9rem;
                 color: v.$color-principal;
                 transition: v.$transicion-suave;
+
                 &:hover {
                     background-color: v.$color-principal;
                     color: v.$color-fondo !important;
                 }
             }
         }
-    }
-
-
-
-
+}
 
     @include v.tablet {
         .espacio-container {
             flex-direction: column;
             text-align: center;
             padding: 4rem 10%;
+
+            
+            .espacio-texto {
+                order: 1;
+            }
+
+            .espacio-foto {
+                order: 2;
+            }
         }
     }
 
@@ -204,10 +210,18 @@
         .espacio-container {
             flex-direction: column;
             text-align: center;
+
+            
+            .espacio-texto {
+                order: 1;
+            }
+
+            .espacio-foto {
+                order: 2;
+            }
         }
     }
-}
-
+    }
 
 .about {
     @include v.flex-box(row, nowrap, center, center);
@@ -257,9 +271,11 @@
 
 
 .estad {
-    padding: v.$padding-seccion;
+    
     background-color: v.$color-principal;
     color: v.$color-fondo;
+    padding: v.$padding-seccion;
+
     .estad-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -267,10 +283,12 @@
         margin: 0 auto;
         border-top: 1px solid #444;
         border-left: 1px solid #444;
+
         .estad-icono {
             padding: 3rem 2.5rem;
             border-right: 1px solid #444;
             border-bottom: 1px solid #444;
+
             .estad-num {
                 display: block;
                 font-family: v.$font-titulos;
@@ -280,6 +298,7 @@
                 margin-bottom: 1rem;
                 color: v.$color-fondo;
             }
+
             .estad-desc {
                 text-transform: uppercase;
                 letter-spacing: 2px;
@@ -289,30 +308,40 @@
         }
     }
 
+
     @include v.tablet {
-        .estad-container { grid-template-columns: 1fr; }
+        .estad-container {
+            .estad-icono {
+                padding: 2rem 1.5rem;
+
+                .estad-num {
+                    font-size: 3.5rem;
+                }
+            }
+        }
     }
+
 
     @include v.mobile {
-        .estad-num { font-size: 3rem; }
-        .estad-icono { 
-            padding: 1.5rem;
-            border-left: 1px solid #444;
-            border-right: 1px solid #444;
-        }
-            
-        
-    }
-
-.estad-icono {
-        border-left: 1px solid #444;
-        border-right: 1px solid #444;
-    }
+        padding: 2rem 0;
 
         .estad-container {
-        grid-template-columns: 1fr !important;
-        border-left: none;
-        border-top: 1px solid #444;
-    }
+            
+            grid-template-columns: 1fr !important;
+            border-left: none;
+            border-right: none;
+        }
 
+        .estad-icono {
+            padding: 2rem;
+            text-align: center;
+            border-left: none;
+            border-right: none;
+
+            
+            .estad-num {
+                font-size: 3rem;
+            }
+        }
+    }
 }

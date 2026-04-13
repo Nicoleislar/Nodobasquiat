@@ -24,14 +24,15 @@ $sombra-card:      0 4px 6px rgba(0,0,0,0.1); // Por si quieres estandarizar som
 
 
 
+
 @mixin tablet {
-    @media (min-width: 481px) and (max-width: 960px) {
+    @media (max-width: 960px) {
         @content;
     }
 }
 
 @mixin mobile {
-    @media (min-width: 300px) and (max-width: 480px) {
+    @media (max-width: 580px) {
         @content;
     }
 }
